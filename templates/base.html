@@ -31,7 +31,7 @@
         </div>
       {% endif %}
 
-      <div class = "sitebanner">
+        <div class = "sitebanner">
         <h1><a class="sitetitle nodec" href="{{ SITEURL }}">{{ SITENAME }}</a></h1>
         <h3 class ="sitesubtitle">{{ SITESUBTITLE }}</h3>
         <!-- nav -->
@@ -41,7 +41,7 @@
             {% for title, link in MENUITEMS %}
               <li><a class="nodec" href="{{ link }}">{{ title }}</a></li>
             {% endfor %}
-            <!--pages-->
+            <!-- pages -->
             {% if DISPLAY_PAGES_ON_MENU %}
               {% for p in PAGES %}
                 <li{% if p == page %} class="active"{% endif %}><a class="nodec" href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>

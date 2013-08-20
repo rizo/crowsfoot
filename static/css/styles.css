@@ -51,9 +51,9 @@ body {
 .sitesubtitle {
     color: #000;
     font-size: 1em;
+    font-weight: normal;
     margin-bottom: 30px;
     margin-top: 20px;
-    /* padding-left: 30px; */
 }
 
 /* The navbar. */
@@ -66,6 +66,10 @@ body {
 .menu li {
     display: inline;
     margin-right: 10px;
+}
+
+.menu li.active {
+    color: #000;
 }
 
 /* Article list on index page. */
@@ -117,7 +121,7 @@ a:hover { /* Hover style: transition to orange. Cool! */
     -webkit-transition:color .2s ease-in-out;
     -moz-transition:color .2s ease-in-out;
     transition:color .2s ease-in-out;
-    color: orange;
+    color: #c00;
 }
 
 /* Generic to all content. */
