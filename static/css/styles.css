@@ -74,8 +74,21 @@ body {
 
 /* Article list on index page. */
 
-.posttitle {
+li.post {
+    margin-bottom: 40px;
+}
+
+.posttitle h3 {
     font-size: 1.6em;
+    width: 600px;
+    float: left;
+}
+
+
+.published {
+    color: #666;
+    font-size: 1.1em;
+    float: right;
 }
 
 .posttitle a {
@@ -84,20 +97,30 @@ body {
     left: -10px; /* Hack to dodge :hover issue. */
 }
 
+
 .postinfo {
+    clear: both;
     margin-top: 5px;
     margin-bottom: 10px;
     color: #666;
     font-size: .7em;
 }
 
+
 .postsummary {
     font-family: Merriweather;
     font-weight: 300;
+    margin-left: 2px;
+    line-height: 140%;
 }
 
 .post {
     margin-bottom: 20px;
+}
+
+ul#postlist {
+    margin-top: 60px;
+    list-style-type:none;
 }
 
 /* Links. */
@@ -123,6 +146,8 @@ a:hover { /* Hover style: transition to orange. Cool! */
     transition:color .2s ease-in-out;
     color: #c00;
 }
+
+
 
 /* Generic to all content. */
 
@@ -154,6 +179,13 @@ sub {
 .article {
     margin-top: 30px;
 }
+
+
+a.more::after {
+    color: #ccc;
+    content: " →";
+}
+
 
 /* Lists */
 
@@ -245,3 +277,23 @@ footer {
     height: 30px;
     position: absolute;
 }
+
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
